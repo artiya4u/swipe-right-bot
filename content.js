@@ -63,7 +63,11 @@ function processImage(apiKey, profileImageURL) {
           // Lady!
           swipeRight(profileImageURL, labelMap);
         } else {
-          swipeLeft();
+          if (Math.random() > 0.93) {
+            swipeRight(profileImageURL, labelMap);
+          } else {
+            swipeLeft();
+          }
         }
       } else {
         swipeLeft();
