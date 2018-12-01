@@ -59,9 +59,6 @@ function processImage(apiKey, profileImageURL) {
         } else if ("beauty" in labelMap && labelMap["beauty"] >= 0.9) {
           // Definitely swipe right. Never miss this.
           swipeRight(profileImageURL, "beauty");
-        } else if ("lady" in labelMap && labelMap["lady"] >= 0.8) {
-          // Lady!
-          swipeRight(profileImageURL, 'lady');
         } else if ("beauty" in labelMap && labelMap["beauty"] >= 0.8 &&
           "smile" in labelMap && labelMap["smile"] >= 0.8) {
           // smile!
