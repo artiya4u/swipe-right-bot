@@ -67,7 +67,7 @@ function processImage(apiKey, profileImageURL) {
           // smile!
           swipeRight(profileImageURL, 'smile');
         } else {
-          if (Math.random() > 0.93) {
+          if (Math.random() > 0.96969) {
             swipeRight(profileImageURL, "lucky");
           } else {
             swipeLeft();
