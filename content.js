@@ -58,17 +58,17 @@ function processImage(apiKey, profileImageURL) {
           swipeLeft();
         } else if ("beauty" in labelMap && labelMap["beauty"] >= 0.9) {
           // Definitely swipe right. Never miss this.
-          swipeRight(profileImageURL, labelMap);
+          swipeRight(profileImageURL, "beauty");
         } else if ("lady" in labelMap && labelMap["lady"] >= 0.8) {
           // Lady!
-          swipeRight(profileImageURL, labelMap);
+          swipeRight(profileImageURL, 'lady');
         } else if ("beauty" in labelMap && labelMap["beauty"] >= 0.8 &&
           "smile" in labelMap && labelMap["smile"] >= 0.8) {
           // smile!
-          swipeRight(profileImageURL, labelMap);
+          swipeRight(profileImageURL, 'smile');
         } else {
           if (Math.random() > 0.93) {
-            swipeRight(profileImageURL, "Lucky one");
+            swipeRight(profileImageURL, "lucky");
           } else {
             swipeLeft();
           }
