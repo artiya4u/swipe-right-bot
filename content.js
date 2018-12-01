@@ -50,6 +50,9 @@ function processImage(apiKey, profileImageURL) {
         if ("gravure idol" in labelMap || "japanese idol" in labelMap) {
           // I don't like it.
           swipeLeft();
+        } else if ("selfie" in labelMap) {
+          // I don't like it.
+          swipeLeft();
         } else if ("brassiere" in labelMap || "lingerie" in labelMap || "undergarment" in labelMap) {
           // I don't like it.
           swipeLeft();
