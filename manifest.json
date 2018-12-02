@@ -1,15 +1,14 @@
 {
   "manifest_version": 2,
-
   "name": "Swipe Right - Auto like for Tinder",
   "description": "Auto like for Tinder using AI",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "options_ui": {
     "page": "options.html",
     "chrome_style": true
   },
   "icons": {
-    "128": "icon.png" 
+    "128": "icon.png"
   },
   "permissions": [
     "storage",
@@ -18,8 +17,12 @@
   ],
   "content_scripts": [
     {
-      "matches": ["https://tinder.com/app/recs"],
-      "js": ["content.js"]
+      "matches": [
+        "https://tinder.com/app/recs"
+      ],
+      "js": [
+        "content.js"
+      ]
     }
   ]
 }

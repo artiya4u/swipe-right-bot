@@ -108,5 +108,7 @@ chrome.storage.sync.get(null, function (items) {
     }
 
     mainLoop();
+  } else {
+    alert("Please add Google Vision API key from Swipe Right extension options");
   }
 });

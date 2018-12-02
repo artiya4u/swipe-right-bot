@@ -17,7 +17,7 @@ function save_options() {
 // stored in chrome.storage.
 function restore_options() {
   chrome.storage.sync.get({
-    apiKey: "AIzaSyCG9xECAI4cpQytxUJOxr-gYtBRZBNgwlU"
+    apiKey: ""
   }, function (items) {
     document.getElementById('apiKey').value = items.apiKey;
   });
