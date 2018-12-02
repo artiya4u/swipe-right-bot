@@ -63,6 +63,10 @@ function processImage(apiKey, profileImageURL) {
           "smile" in labelMap && labelMap["smile"] >= 0.8) {
           // smile!
           swipeRight(profileImageURL, 'smile');
+        } else if ("beauty" in labelMap && labelMap["beauty"] >= 0.8 &&
+          "hairstyle" in labelMap && labelMap["hairstyle"] >= 0.8) {
+          // hairstyle!
+          swipeRight(profileImageURL, 'hairstyle');
         } else {
           if (Math.random() > 0.96969) {
             swipeRight(profileImageURL, "lucky");
