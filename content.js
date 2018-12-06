@@ -5,8 +5,8 @@ function swipeLeft() {
   }
 }
 
-function swipeRight(profileImageURL, labelMap) {
-  console.log(profileImageURL, labelMap);
+function swipeRight(profileImageURL, why) {
+  console.log("LIKE", profileImageURL, why);
   let bnt = document.querySelector("button[aria-label='Like']");
   if (bnt) {
     bnt.click();
@@ -46,7 +46,7 @@ function processImage(apiKey, profileImageURL) {
       for (let i = 0; i < labels.length; i++) {
         labelMap[labels[i]["description"]] = labels[i]["score"];
       }
-
+      console.log(labelMap);
       if ("girl" in labelMap && labelMap["girl"] >= 0.6) {
         if ("gravure idol" in labelMap || "japanese idol" in labelMap) {
           // I don't like it.
