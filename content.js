@@ -46,6 +46,7 @@ function processImage(apiKey, profileImageURL) {
       for (let i = 0; i < labels.length; i++) {
         labelMap[labels[i]["description"]] = labels[i]["score"];
       }
+
       if ("girl" in labelMap && labelMap["girl"] >= 0.6) {
         if ("gravure idol" in labelMap || "japanese idol" in labelMap) {
           // I don't like it.
@@ -71,7 +72,7 @@ function processImage(apiKey, profileImageURL) {
           // lady!
           swipeRight(profileImageURL, 'lady');
         } else {
-          if (Math.random() > 0.96969) {
+          if (Math.random() * 100 <= Math.PI) {
             swipeRight(profileImageURL, "lucky");
           } else {
             swipeLeft();
@@ -116,6 +117,6 @@ chrome.storage.sync.get(null, function (items) {
 
     mainLoop();
   } else {
-    alert("Please add Google Vision API key from Swipe Right extension options");
+    alert("To use Swipe Right bot, please add Google Vision API key from extension options");
   }
 });
