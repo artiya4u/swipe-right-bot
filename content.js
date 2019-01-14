@@ -100,8 +100,7 @@ chrome.storage.sync.get(null, function (items) {
   if (items.apiKey) {
     function mainLoop() {
       setTimeout(function () {
-        let imageNodeAll = document.querySelectorAll('.StretchedBox');
-        let imageNode = imageNodeAll[imageNodeAll.length - 3];
+        let imageNode = document.querySelectorAll('div.Bdrs\\(8px\\).Bgz\\(cv\\).Bgp\\(c\\).StretchedBox')[1];
         if (imageNode) {
           let imgUrl = imageNode.style.backgroundImage;
           imgUrl = imgUrl.substring(
@@ -113,11 +112,24 @@ chrome.storage.sync.get(null, function (items) {
           console.log('Not found profile image, please refresh the page.');
         }
         mainLoop();
-      }, 3000)
+      }, 3800)
     }
 
     mainLoop();
   } else {
-    alert("To use Swipe Right bot, please add Google Vision API key from extension options");
+    alert("Please add Google Vision API key from extension options. Now using demo mode!!");
+
+    function demoLoop() {
+      setTimeout(function () {
+        if (Math.random() <= 0.88) {
+          swipeRight("N/A", "demo");
+        } else {
+          swipeLeft();
+        }
+        demoLoop();
+      }, 2000)
+    }
+
+    demoLoop();
   }
 });
