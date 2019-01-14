@@ -100,7 +100,8 @@ chrome.storage.sync.get(null, function (items) {
   if (items.apiKey) {
     function mainLoop() {
       setTimeout(function () {
-        let imageNode = document.querySelectorAll('.StretchedBox\\:\\:a')[1];
+        let imageNodeAll = document.querySelectorAll('.StretchedBox');
+        let imageNode = imageNodeAll[imageNodeAll.length - 3];
         if (imageNode) {
           let imgUrl = imageNode.style.backgroundImage;
           imgUrl = imgUrl.substring(
