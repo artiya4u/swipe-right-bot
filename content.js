@@ -100,7 +100,7 @@ chrome.storage.sync.get(null, function (items) {
   if (items.apiKey) {
     function mainLoop() {
       setTimeout(function () {
-        let imageNode = document.querySelectorAll('div.Bdrs\\(8px\\).Bgz\\(cv\\).Bgp\\(c\\).StretchedBox')[1];
+        let imageNode = document.querySelectorAll('#content > span > div > div.App__body.H\\28 100\\25 \\29.Pos\\28 r\\29.Z\\28 0\\29 > div > main > div.H\\28 100\\25 \\29 > div > div > div.recsCardboard.W\\28 100\\25 \\29.Mt\\28 a\\29.H\\28 100\\25 \\29 --s.Px\\28 10px\\29 --s > div > div.recsCardboard__cards.Expand.Animdur\\28 \\24 fast\\29.Animtf\\28 eio\\29.Pos\\28 r\\29.CenterAlign.Z\\28 1\\29 > div.recCard.Ov\\28 h\\29.Cur\\28 p\\29.W\\28 100\\25 \\29.Bgc\\28 \\24 c-placeholder\\29.StretchedBox.Bdrs\\28 8px\\29.CenterAlign--ml.Toa\\28 n\\29.active > div.Expand.D\\28 f\\29.tappable-view > div.Animdur\\28 \\24 fast\\29.Animtf\\28 eio\\29.tappable_recCard.Expand.Pos\\28 a\\29 > div > div:nth-child(1) > div > div')[0];
         if (imageNode) {
           let imgUrl = imageNode.style.backgroundImage;
           imgUrl = imgUrl.substring(
